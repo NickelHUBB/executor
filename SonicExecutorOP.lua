@@ -1,8 +1,3 @@
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
-
 local SonicX = Instance.new("ScreenGui")
 local MainGUI = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
@@ -142,7 +137,7 @@ local DexExp = Instance.new("TextButton")
 local UICorner_47 = Instance.new("UICorner")
 local Rspy = Instance.new("TextButton")
 local UICorner_48 = Instance.new("UICorner")
-local Hoho = Instance.new("TextButton")
+local Btools = Instance.new("TextButton")
 local UICorner_49 = Instance.new("UICorner")
 local G = Instance.new("TextBox")
 local UICorner_50 = Instance.new("UICorner")
@@ -1193,19 +1188,19 @@ Rspy.TextWrapped = true
 UICorner_48.CornerRadius = UDim.new(0, 6)
 UICorner_48.Parent = Rspy
 
-Hoho.Name = "Hoho"
-Hoho.Parent = CommonScripts
-Hoho.BackgroundColor3 = Color3.fromRGB(208, 0, 0)
-Hoho.Position = UDim2.new(0.742672026, 0, 0.469468951, 0)
-Hoho.Size = UDim2.new(0, 75, 0, 19)
-Hoho.Font = Enum.Font.Ubuntu
-Hoho.Text = "Hoho Hub"
-Hoho.TextColor3 = Color3.fromRGB(255, 255, 255)
-Hoho.TextSize = 12.000
-Hoho.TextWrapped = true
+Btools.Name = "Btools"
+Btools.Parent = CommonScripts
+Btools.BackgroundColor3 = Color3.fromRGB(208, 0, 0)
+Btools.Position = UDim2.new(0.742672026, 0, 0.469468951, 0)
+Btools.Size = UDim2.new(0, 75, 0, 19)
+Btools.Font = Enum.Font.Ubuntu
+Btools.Text = "Btools"
+Btools.TextColor3 = Color3.fromRGB(255, 255, 255)
+Btools.TextSize = 12.000
+Btools.TextWrapped = true
 
 UICorner_49.CornerRadius = UDim.new(0, 6)
-UICorner_49.Parent = Hoho
+UICorner_49.Parent = Btools
 
 G.Name = "G"
 G.Parent = BasicHaxTab
@@ -1810,6 +1805,17 @@ local function EHQMLS_fake_script() -- Savebtn.LocalScript
 		script.Parent.Parent.Active = false
 		script.Parent.Parent.Visible = false
 		script.Parent.Parent.Position = UDim2.new(1.019, 0 ,-0, 0)
+		
+	local AkaliNotif = loadstring(game:HttpGet("https://pastebin.com/raw/0YSLsjaj"))();
+    local Notify = AkaliNotif.Notify;
+
+    wait(0.1);
+
+    Notify({
+    Description = "Successful Save !!";
+    Title = "File Name : "..name.Text..ex.Text.."";
+    Duration = 3;
+    });
 	end)
 end
 coroutine.wrap(EHQMLS_fake_script)()
@@ -2001,13 +2007,13 @@ local function NUID_fake_script() -- Rspy.LocalScript
 	end)
 end
 coroutine.wrap(NUID_fake_script)()
-local function CUTZL_fake_script() -- Hoho.LocalScript 
-	local script = Instance.new('LocalScript', Hoho)
+local function CUTZL_fake_script() -- Btools.LocalScript 
+	local script = Instance.new('LocalScript', Btools)
 
 	local btn = script.Parent
 	
 	btn.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
+		loadstring(game:GetObjects("rbxassetid://6695644299")[1].Source)()
 	end)
 end
 coroutine.wrap(CUTZL_fake_script)()
